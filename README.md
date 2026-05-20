@@ -4,7 +4,6 @@
 
 ## Integrantes
 - Christian Javier Rosales Palacios - RP241102
-- Daniel Eduardo Salmerón Alvarado - SA212548
 - Jefferson Ulises Martínez López - ML250841
 - Rene Osmin Aparicio Ruiz - AR240329
 - Fernando José Cornejo Solano - CS250072

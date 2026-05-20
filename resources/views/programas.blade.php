@@ -20,7 +20,7 @@
                     </button>
                     
                     <!-- Botón para donar -->
-                    <a href="{{ url('/donar-programa/' . $programa->id) }}" class="btn btn-donar btn-sm">Donar a este programa</a>
+                   <a href="{{ url('/donaciones') }}" class="btn btn-donar btn-sm">Donar a este programa</a>
                 </div>
             </div>
         </div>

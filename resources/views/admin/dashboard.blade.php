@@ -23,6 +23,66 @@
         @if($user->rol == 'admin')
             <div class="alert alert-success">Tienes acceso TOTAL.</div>
             <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>➕</h3>
+                        <h5>Programas</h5>
+                        <a href="{{ url('/admin/programas') }}" class="btn btn-primary btn-sm">Gestionar Programas</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>📅</h3>
+                        <h5>Eventos</h5>
+                        <a href="{{ url('/admin/eventos') }}" class="btn btn-primary btn-sm">Gestionar Eventos</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>💰</h3>
+                        <h5>Donaciones</h5>
+                        <a href="{{ url('/admin/donaciones') }}" class="btn btn-primary btn-sm">Gestionar Donaciones</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>🎙️</h3>
+                        <h5>Prédicas</h5>
+                        <a href="{{ url('/admin/predicas') }}" class="btn btn-primary btn-sm">Gestionar Prédicas</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>👥</h3>
+                        <h5>Usuarios Admin</h5>
+                        <a href="{{ url('/admin/usuarios') }}" class="btn btn-warning btn-sm">Gestionar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+    <div class="card p-3 text-center">
+        <h3>✉️</h3>
+        <h5>Mensajes</h5>
+        <a href="{{ url('/admin/mensajes') }}" class="btn btn-primary btn-sm">Ver Mensajes</a>
+    </div>
+</div>
+        @elseif($user->rol == 'editor')
+            <div class="alert alert-info">Tienes acceso de EDITOR.</div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>➕</h3>
+                        <h5>Programas</h5>
+                        <a href="{{ url('/admin/programas') }}" class="btn btn-primary btn-sm">Ver Programas</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>💰</h3>
+                        <h5>Donaciones</h5>
+                        <button class="btn btn-secondary btn-sm" disabled>Próximamente</button>
+                    </div>
+                </div>
                 <div class="col-md-4"><div class="card p-3">➕ Crear evento</div></div>
                 <div class="col-md-4"><div class="card p-3">✏️ Editar eventos</div></div>
                 <div class="col-md-4"><div class="card p-3">🗑️ Eliminar eventos</div></div>
@@ -36,12 +96,23 @@
                 <div class="col-md-4"><div class="card p-3">➕ Crear evento</div></div>
                 <div class="col-md-4"><div class="card p-3">✏️ Editar eventos</div></div>
                 <div class="col-md-4"><div class="card p-3">💰 Ver donaciones</div></div>
+main
             </div>
         @else
             <div class="alert alert-warning">Tienes acceso de SUPERVISOR (solo lectura).</div>
             <div class="row">
+Rene-AR240329
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3 text-center">
+                        <h3>👁️</h3>
+                        <h5>Programas</h5>
+                        <a href="{{ url('/programas') }}" class="btn btn-info btn-sm">Ver sitio</a>
+                    </div>
+                </div>
+
                 <div class="col-md-4"><div class="card p-3">👁️ Ver eventos</div></div>
                 <div class="col-md-4"><div class="card p-3">👁️ Ver donaciones</div></div>
+ main
             </div>
         @endif
     </div>

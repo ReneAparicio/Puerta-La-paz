@@ -19,8 +19,9 @@
                 <li class="nav-item"><a class="nav-link" href="{{ url('/predicas') }}">Prédicas</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/programas') }}">Programas</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/contacto') }}">Contacto</a></li>
-                    @auth('admin')
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/admin/programas') }}">Admin</a></li>
+
+                @auth('admin')
+                <li class="nav-item"><a class="nav-link" href="{{ url('/admin/dashboard') }}">Dashboard</a></li>
                 @endauth
             </ul>
         </div>
