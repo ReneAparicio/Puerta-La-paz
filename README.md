@@ -9,6 +9,91 @@
 - Fernando José Cornejo Solano - CS250072
 
 ---
+# Instrucciones para ejecutar el proyecto
+
+## 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/ReneAparicio/Puerta-La-paz.git
+cd Puerta-La-paz
+```
+
+## 2. Instalar dependencias
+
+```bash
+composer install
+```
+
+## 3. Copiar y configurar el archivo `.env`
+
+```bash
+cp .env.example .env
+```
+
+Editar el archivo `.env` con los datos de la base de datos:
+
+```env
+APP_KEY=
+APP_NAME=Laravel
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=puerta_paz
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+## 4. Generar la clave de la aplicación
+
+```bash
+php artisan key:generate
+```
+
+## 5. Crear la base de datos
+
+1. Abrir XAMPP y encender Apache y MySQL.
+2. Ir a `http://localhost/phpmyadmin`
+3. Crear una base de datos llamada `puerta_paz`
+
+## 6. Ejecutar las migraciones
+
+```bash
+php artisan migrate
+```
+
+## 7. Crear el enlace para las imágenes
+
+```bash
+php artisan storage:link
+```
+
+## 8. Ejecutar el servidor
+
+```bash
+php artisan serve
+```
+
+## 9. Abrir el proyecto en el navegador
+
+```text
+http://localhost:8000
+```
+
+## 10. Acceder al panel administrativo
+
+```text
+http://localhost:8000/admin/login
+```
+
+### Credenciales de acceso
+
+- **Usuario:** `admin@puertadepaz.com`
+- **Contraseña:** `admin123`
+
 
 ## ENLACES
 
