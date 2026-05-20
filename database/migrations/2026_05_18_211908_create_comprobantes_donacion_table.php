@@ -14,10 +14,10 @@ return new class extends Migration
     Schema::create('comprobantes_donacion', function (Blueprint $table) {
         $table->id();
         $table->foreignId('donacion_id')->constrained('donaciones')->onDelete('cascade');
-        $table->string('numero_comprobante'); // Ej: 25DS000N1
-        $table->string('serie'); // Ej: 25DS000N1 al 25DS000N50
+        $table->string('numero_comprobante'); 
+        $table->string('serie'); 
         $table->string('nit_emisor', 20)->default('0602-060401-101-1');
-        $table->string('nombre_emisor')->default('IGLESIA ALIANZA CRISTIANA Y MISIONERA DE EL SALVADOR');
+        $table->string('nombre_emisor')->default('IGLESIA PUERTA DE PAZ');
         $table->date('fecha_emision');
         $table->decimal('monto', 10, 2);
         $table->string('resolucion_numero')->default('15041-RES-IN-60695-2025');
